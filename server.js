@@ -7,7 +7,7 @@ http.createServer(function (req, res) {
   res.write("The date and time are currently: " + dt.myDateTime() + "<br>");
   res.write(req.url);
   var q = url.parse(req.url, true).query;
-  var txt = q.year + " " + q.month;
+  var txt = q.year + " " + q.month + " " + q.day;
   res.write("<br>"+txt);
   res.end();
 }).listen(8766);
