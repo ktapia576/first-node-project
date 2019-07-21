@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const exphbs  = require('express-handlebars');
+const members = require('./Members');
 //const logger = require('./middleware/logger');
 
 const PORT = process.env.PORT || 3000;
@@ -16,7 +17,11 @@ app.use(express.urlencoded({extended: false}))
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
-app.get('/', (req, res) => res.render('index'))
+// Home page route
+app.get('/', (req, res) => res.render('index', {
+    title: 'Member App',
+    members
+}))
 
 app.use('/api/members', require('./routes/api/members'));
 
