@@ -19,7 +19,8 @@
   "homepage": "https://github.com/ktapia576/first-node-project#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "hbs": "^4.0.4"
+    "express-handlebars": "^3.1.0",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {}
 }
