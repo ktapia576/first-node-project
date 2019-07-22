@@ -13,8 +13,8 @@ app.use(express.urlencoded({extended: false}))
 // Initializes Middleware for logging
 //app.use(logger);
 
-// Handlebars Middleware
-app.engine('handlebars', exphbs());
+// Handlebars Middleware, exphbs() allows to change options/config
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // Home page route
